@@ -1,0 +1,68 @@
+@import 'mixins';
+@import 'variables';
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+#app_img_main {
+    @include main_images(0.98, 5, 0);
+}
+
+#app_img_main2 {
+    @include main_images(0.97, 4, 1);
+}
+
+#app_img_main3 {
+    @include main_images(0.96, 3, 2);
+}
+
+#app_img_main4 {
+    @include main_images(0.95, 2, 3);
+    position: absolute;
+}
+
+#app_img_main5 {
+    @include main_images(0.94, 1, 4);
+}
+
+.container-img-main {
+    //width: 800px;
+    display: table;
+    margin: 0 auto;
+
+    .img-main{
+        display: inline-block;
+        width: 0;
+    }
+
+    img {
+        height: 350px;
+        width: 175px;
+    }
+}
+
+#feature {
+    .features {
+        margin: 5px;
+
+        > i {
+            border: 1px solid $icon-color;
+            border-radius: 15%;
+
+            &.icon-color {
+                color: $icon-color;
+            }
+        }
+
+        > .text-feature {
+            vertical-align: top;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@mixin main_images($opacity, $zindex, $translateX){
+    height: 350px;
+    width: 175px;
+    position: relative;
+    opacity: $opacity;
+    z-index: $zindex;
+    transform: translateX($translateX * -60px);
+}
