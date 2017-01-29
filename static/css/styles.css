@@ -15,10 +15,6 @@ main {
 .container-app .title-app {
   font-size: 24px;
 }
-.container-app .container-img-main {
-  display: table;
-  margin: 0 auto;
-}
 .container-app .container-img-main .img-main {
   display: inline-block;
   width: 0;
@@ -92,6 +88,11 @@ main {
 
 .container-contact {
   background-color: lightgray;
+}
+
+._center {
+  display: table;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

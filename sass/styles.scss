@@ -20,8 +20,6 @@ main {
     }
 
     .container-img-main {
-        display: table;
-        margin: 0 auto;
 
         .img-main{
             display: inline-block;
@@ -84,4 +82,9 @@ main {
 
 .container-contact {
     background-color: lightgray;
+}
+
+._center{
+    display: table;
+    margin: 0 auto;
 }
