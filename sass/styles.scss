@@ -7,19 +7,22 @@ body {
     flex-direction: column;
 }
 
+nav {
+    background-color: $background-color-navbar;
+}
+
 main {
     flex: 1 0 auto;
 }
 
 .container-app {
-    padding: 10px 0 20px;
-    background-color: $background-color;
-
-    .title-app {
-        font-size: 24px;
-    }
+    height: 85vh;
+    padding: 20px 0 20px;
+    background-color: $background-color-app;
+    color: white;
 
     .container-img-main {
+        padding-top: 20px;
 
         .img-main{
             display: inline-block;
@@ -55,12 +58,9 @@ main {
 }
 
 .container-features {
+    height: 85vh;
     padding: 10px 0 20px;
-    background-color: $background-color;
-
-    .title-features {
-        font-size: 24px;
-    }
+    background-color: $background-color-feature;
 
     .features {
         margin: 5px;
@@ -80,8 +80,18 @@ main {
     }
 }
 
+.container-customized {
+    height: 85vh;
+    padding: 10px 0 20px;
+    background-color: $background-color-customized;
+}
+
 .container-contact {
-    background-color: lightgray;
+    background-color: $background-color-contact !important;
+}
+
+._title {
+    font-size: 24px;
 }
 
 ._center{
