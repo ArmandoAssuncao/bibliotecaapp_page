@@ -2,7 +2,49 @@
     height: 350px;
     width: 175px;
     position: relative;
-    opacity: $opacity;
+    //opacity: $opacity;
+    visibility: hidden;
     z-index: $zindex;
-    transform: translateX($translateX * -60px);
+}
+
+@mixin keyframes_main_app_img($name-animation, $from, $to){
+    @include keyframes($name-animation){
+        from {
+            opacity: 0;
+            transform: translate3d($from * -100%, 0, 0);
+        }
+
+        to {
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d($to * -35%, 0, 0);
+        }
+    }
+}
+
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
 }

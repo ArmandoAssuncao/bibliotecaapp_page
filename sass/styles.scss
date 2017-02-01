@@ -36,18 +36,22 @@ main {
 
         #app_img_main {
             @include main_images(1, 5, 0);
+            @include animation('anim-main-app-img 1s linear 1s forwards');
         }
 
         #app_img_main2 {
             @include main_images(0.97, 4, 1);
+            @include animation('anim-main-app-img2 1s linear 2s forwards');
         }
 
         #app_img_main3 {
             @include main_images(0.96, 3, 2);
+            @include animation('anim-main-app-img3 1s linear 3s forwards');
         }
 
         #app_img_main4 {
             @include main_images(0.95, 2, 3);
+            @include animation('anim-main-app-img4 1s linear 4s forwards');
             position: absolute;
         }
 
@@ -99,3 +103,8 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+
+@include keyframes_main_app_img(anim-main-app-img, 1, 0);
+@include keyframes_main_app_img(anim-main-app-img2, 1.1, 1);
+@include keyframes_main_app_img(anim-main-app-img3, 1.3, 2);
+@include keyframes_main_app_img(anim-main-app-img4, 1.6, 3);
