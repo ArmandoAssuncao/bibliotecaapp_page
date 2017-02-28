@@ -108,7 +108,7 @@ main {
     .box-color {
         height: 50px;
         width: 50px;
-        margin: 5px;
+        margin: 3px;
         float: left;
 
         &.color-1 {background-color: aqua;}
@@ -120,6 +120,13 @@ main {
         &.color-7 {background-color: aqua;}
         &.color-8 {background-color: aqua;}
         &.color-9 {background-color: aqua;}
+    }
+
+    .app-customized {
+        img {
+            height: 300px;
+            width: 150px;
+        }
     }
 }
 

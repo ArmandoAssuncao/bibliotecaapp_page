@@ -104,7 +104,7 @@ main {
   .container-customized .box-color {
     height: 50px;
     width: 50px;
-    margin: 5px;
+    margin: 3px;
     float: left; }
     .container-customized .box-color.color-1 {
       background-color: aqua; }
@@ -124,6 +124,9 @@ main {
       background-color: aqua; }
     .container-customized .box-color.color-9 {
       background-color: aqua; }
+  .container-customized .app-customized img {
+    height: 300px;
+    width: 150px; }
 
 .container-contact {
   background-color: #222 !important; }
