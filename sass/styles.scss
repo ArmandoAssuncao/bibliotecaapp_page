@@ -97,6 +97,30 @@ main {
     height: 85vh;
     padding: 10px 0 20px;
     background-color: $background-color-customized;
+
+    .logo {
+        img {
+            height: 100px;
+            width: 130px;
+        }
+    }
+
+    .box-color {
+        height: 50px;
+        width: 50px;
+        margin: 5px;
+        float: left;
+
+        &.color-1 {background-color: aqua;}
+        &.color-2 {background-color: aqua;}
+        &.color-3 {background-color: aqua;}
+        &.color-4 {background-color: aqua;}
+        &.color-5 {background-color: aqua;}
+        &.color-6 {background-color: aqua;}
+        &.color-7 {background-color: aqua;}
+        &.color-8 {background-color: aqua;}
+        &.color-9 {background-color: aqua;}
+    }
 }
 
 .container-contact {

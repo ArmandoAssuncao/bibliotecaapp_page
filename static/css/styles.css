@@ -98,6 +98,32 @@ main {
   height: 85vh;
   padding: 10px 0 20px;
   background-color: #fafafa; }
+  .container-customized .logo img {
+    height: 100px;
+    width: 130px; }
+  .container-customized .box-color {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    float: left; }
+    .container-customized .box-color.color-1 {
+      background-color: aqua; }
+    .container-customized .box-color.color-2 {
+      background-color: aqua; }
+    .container-customized .box-color.color-3 {
+      background-color: aqua; }
+    .container-customized .box-color.color-4 {
+      background-color: aqua; }
+    .container-customized .box-color.color-5 {
+      background-color: aqua; }
+    .container-customized .box-color.color-6 {
+      background-color: aqua; }
+    .container-customized .box-color.color-7 {
+      background-color: aqua; }
+    .container-customized .box-color.color-8 {
+      background-color: aqua; }
+    .container-customized .box-color.color-9 {
+      background-color: aqua; }
 
 .container-contact {
   background-color: #222 !important; }
