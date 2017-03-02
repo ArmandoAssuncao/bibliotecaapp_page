@@ -88,11 +88,16 @@ main {
     margin: 5px; }
     .container-features .features > i {
       border: 1px solid gray;
-      border-radius: 15%; }
+      border-radius: 15%;
+      float: left;
+      margin-right: 10px; }
       .container-features .features > i.icon-color {
         color: gray; }
-    .container-features .features > .text-feature {
-      vertical-align: top; }
+    .container-features .features > .title, .container-features .features > .description {
+      vertical-align: top;
+      margin: 2px 0; }
+    .container-features .features > .title {
+      font-weight: 500; }
 
 .container-customized {
   height: 85vh;
@@ -132,7 +137,7 @@ main {
       z-index: 2; }
     .container-customized .app-customized img.app-example-2 {
       z-index: 1;
-      transform: translateX(-50%); }
+      transform: translate(-50%, -5px); }
 
 .container-contact {
   background-color: #222 !important; }

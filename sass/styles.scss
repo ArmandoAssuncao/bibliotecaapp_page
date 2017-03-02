@@ -81,14 +81,24 @@ main {
         > i {
             border: 1px solid $icon-color;
             border-radius: 15%;
+            float: left;
+            margin-right: 10px;
 
             &.icon-color {
                 color: $icon-color;
             }
         }
 
-        > .text-feature {
+        > .title, > .description {
             vertical-align: top;
+            margin: 2px 0;
+        }
+
+        > .title {
+            font-weight: 500;
+        }
+
+        > .description {
         }
     }
 }
@@ -134,7 +144,7 @@ main {
 
             &.app-example-2 {
                 z-index: 1;
-                transform: translateX(-50%);
+                transform: translate(-50%, -5px);
             }
         }
     }
