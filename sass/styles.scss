@@ -124,8 +124,18 @@ main {
 
     .app-customized {
         img {
+            position: relative;
             height: 300px;
             width: 150px;
+
+            &.app-example-1 {
+                z-index: 2;
+            }
+
+            &.app-example-2 {
+                z-index: 1;
+                transform: translateX(-50%);
+            }
         }
     }
 }
