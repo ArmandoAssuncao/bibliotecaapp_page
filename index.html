@@ -15,9 +15,9 @@
                 <div class="container">
                     <a href="#" class="brand-logo">Biblioteka</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="#app">App</a></li>
-                        <li><a href="#feature">Características</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#app" class="smooth-roll">App</a></li>
+                        <li><a href="#feature" class="smooth-roll">Características</a></li>
+                        <li><a href="#contact" class="smooth-roll">Contato</a></li>
                     </ul>
                 </div>
             </div>
@@ -218,5 +218,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script src="static/third_party/wow.js/wow.min.js"></script>
         <script> new WOW().init(); </script>
+        <script>
+            $(document).on('click', '.smooth-roll', function(event){
+                event.preventDefault();
+
+                var offsetTop = $( $.attr(this, 'href') ).offset().top;
+                var timeAnim = offsetTop < 1000 ? offsetTop : offsetTop / 2;
+
+                $('html, body').animate({
+                    scrollTop: offsetTop
+                }, timeAnim);
+            });
+        </script>
     </body>
 </html>
