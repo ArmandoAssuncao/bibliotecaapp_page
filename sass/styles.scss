@@ -108,6 +108,10 @@ main {
     padding: 10px 0 20px;
     background-color: $background-color-customized;
 
+    .container-detail {
+        height: 300px;
+    }
+
     .logo {
         img {
             height: 100px;
@@ -158,10 +162,17 @@ main {
     font-size: 24px;
 }
 
-._center{
+._center-h {
     display: table;
     margin-left: auto;
     margin-right: auto;
+}
+
+._center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @include keyframes_main_app_img(anim-main-app-img, 1, 0);
