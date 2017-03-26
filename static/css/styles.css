@@ -85,7 +85,8 @@ main {
   padding: 10px 0 20px;
   background-color: #f3f3f3; }
   .container-features .features {
-    margin: 5px; }
+    margin: 5px;
+    min-height: 80px; }
     .container-features .features > i {
       border: 1px solid gray;
       border-radius: 15%;
@@ -93,10 +94,10 @@ main {
       margin-right: 10px; }
       .container-features .features > i.icon-color {
         color: gray; }
-    .container-features .features > .title, .container-features .features > .description {
+    .container-features .features .title, .container-features .features .description {
       vertical-align: top;
       margin: 2px 0; }
-    .container-features .features > .title {
+    .container-features .features .title {
       font-weight: 500; }
 
 .container-customized {
