@@ -25,47 +25,74 @@ main {
 }
 
 .container-app {
-    height: 85vh;
-    padding: 20px 0 20px;
+    padding: 40px 0 90px;
     background-color: $background-color-app;
     color: white;
 
-    .container-img-main {
-        padding-top: 20px;
+     .container-design {
+        display: flex;
+        flex-wrap: wrap;
 
-        .img-main{
-            display: inline-block;
-            width: 0;
+        .container-img-main {
+            flex: 4;
+
+            display: flex;
+            flex-wrap: nowrap;
+            padding-top: 20px;
+            justify-content: center;
+
+            .img-main{
+                display: inline-block;
+                width: 0;
+            }
+
+            img {
+                height: 350px;
+                width: 175px;
+            }
+
+            #app_img_main {
+                @include main_images(1, 5, 0);
+                @include animation('anim-main-app-img 0.8s linear 0.8s forwards');
+            }
+
+            #app_img_main2 {
+                @include main_images(0.97, 4, 1);
+                @include animation('anim-main-app-img2 0.8s linear 1.6s forwards');
+            }
+
+            #app_img_main3 {
+                @include main_images(0.96, 3, 2);
+                @include animation('anim-main-app-img3 0.8s linear 2.4s forwards');
+            }
+
+            .app-img-main4-parent {
+                width: 0;
+
+                #app_img_main4 {
+                    @include main_images(0.95, 2, 3);
+                    @include animation('anim-main-app-img4 0.8s linear 3.2s forwards');
+                }
+            }
         }
 
-        img {
-            height: 350px;
-            width: 175px;
-        }
+        .container-phl {
+            flex: 1;
+            align-self: center;
+            min-width: 200px;
+            margin: 0 10px;
 
-        #app_img_main {
-            @include main_images(1, 5, 0);
-            @include animation('anim-main-app-img 1s linear 1s forwards');
-        }
+            .text {
+                text-align: center;
+                font-size: 18px;
+            }
 
-        #app_img_main2 {
-            @include main_images(0.97, 4, 1);
-            @include animation('anim-main-app-img2 1s linear 2s forwards');
-        }
-
-        #app_img_main3 {
-            @include main_images(0.96, 3, 2);
-            @include animation('anim-main-app-img3 1s linear 3s forwards');
-        }
-
-        #app_img_main4 {
-            @include main_images(0.95, 2, 3);
-            @include animation('anim-main-app-img4 1s linear 4s forwards');
-            position: absolute;
-        }
-
-        #app_img_main5 {
-            @include main_images(0.94, 1, 4);
+            .logo-phl {
+                text-align: center;
+                font-family: mistral;
+                color: rgb(95, 158, 160);
+                font-size: 46px;
+            }
         }
     }
 }
@@ -104,7 +131,6 @@ main {
 }
 
 .container-customized {
-    min-height: 85vh;
     padding: 10px 0 20px;
     background-color: $background-color-customized;
 

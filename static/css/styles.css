@@ -16,69 +16,83 @@ main {
   flex: 1 0 auto; }
 
 .container-app {
-  height: 85vh;
-  padding: 20px 0 20px;
+  padding: 40px 0 90px;
   background-color: #411fa5;
   color: white; }
-  .container-app .container-img-main {
-    padding-top: 20px; }
-    .container-app .container-img-main .img-main {
-      display: inline-block;
-      width: 0; }
-    .container-app .container-img-main img {
-      height: 350px;
-      width: 175px; }
-    .container-app .container-img-main #app_img_main {
-      height: 350px;
-      width: 175px;
-      position: relative;
-      visibility: hidden;
-      z-index: 5;
-      -webkit-animation: anim-main-app-img 1s linear 1s forwards;
-      -moz-animation: anim-main-app-img 1s linear 1s forwards;
-      -ms-animation: anim-main-app-img 1s linear 1s forwards;
-      -o-animation: anim-main-app-img 1s linear 1s forwards;
-      animation: anim-main-app-img 1s linear 1s forwards; }
-    .container-app .container-img-main #app_img_main2 {
-      height: 350px;
-      width: 175px;
-      position: relative;
-      visibility: hidden;
-      z-index: 4;
-      -webkit-animation: anim-main-app-img2 1s linear 2s forwards;
-      -moz-animation: anim-main-app-img2 1s linear 2s forwards;
-      -ms-animation: anim-main-app-img2 1s linear 2s forwards;
-      -o-animation: anim-main-app-img2 1s linear 2s forwards;
-      animation: anim-main-app-img2 1s linear 2s forwards; }
-    .container-app .container-img-main #app_img_main3 {
-      height: 350px;
-      width: 175px;
-      position: relative;
-      visibility: hidden;
-      z-index: 3;
-      -webkit-animation: anim-main-app-img3 1s linear 3s forwards;
-      -moz-animation: anim-main-app-img3 1s linear 3s forwards;
-      -ms-animation: anim-main-app-img3 1s linear 3s forwards;
-      -o-animation: anim-main-app-img3 1s linear 3s forwards;
-      animation: anim-main-app-img3 1s linear 3s forwards; }
-    .container-app .container-img-main #app_img_main4 {
-      height: 350px;
-      width: 175px;
-      position: relative;
-      visibility: hidden;
-      z-index: 2;
-      -webkit-animation: anim-main-app-img4 1s linear 4s forwards;
-      -moz-animation: anim-main-app-img4 1s linear 4s forwards;
-      -ms-animation: anim-main-app-img4 1s linear 4s forwards;
-      -o-animation: anim-main-app-img4 1s linear 4s forwards;
-      animation: anim-main-app-img4 1s linear 4s forwards;
-      position: absolute; }
-    .container-app .container-img-main #app_img_main5 {
-      height: 350px;
-      width: 175px;
-      position: relative;
-      visibility: hidden;
-      z-index: 1; }
+  .container-app .container-design {
+    display: flex;
+    flex-wrap: wrap; }
+    .container-app .container-design .container-img-main {
+      flex: 4;
+      display: flex;
+      flex-wrap: nowrap;
+      padding-top: 20px;
+      justify-content: center; }
+      .container-app .container-design .container-img-main .img-main {
+        display: inline-block;
+        width: 0; }
+      .container-app .container-design .container-img-main img {
+        height: 350px;
+        width: 175px; }
+      .container-app .container-design .container-img-main #app_img_main {
+        height: 350px;
+        width: 175px;
+        position: relative;
+        visibility: hidden;
+        z-index: 5;
+        -webkit-animation: anim-main-app-img 0.8s linear 0.8s forwards;
+        -moz-animation: anim-main-app-img 0.8s linear 0.8s forwards;
+        -ms-animation: anim-main-app-img 0.8s linear 0.8s forwards;
+        -o-animation: anim-main-app-img 0.8s linear 0.8s forwards;
+        animation: anim-main-app-img 0.8s linear 0.8s forwards; }
+      .container-app .container-design .container-img-main #app_img_main2 {
+        height: 350px;
+        width: 175px;
+        position: relative;
+        visibility: hidden;
+        z-index: 4;
+        -webkit-animation: anim-main-app-img2 0.8s linear 1.6s forwards;
+        -moz-animation: anim-main-app-img2 0.8s linear 1.6s forwards;
+        -ms-animation: anim-main-app-img2 0.8s linear 1.6s forwards;
+        -o-animation: anim-main-app-img2 0.8s linear 1.6s forwards;
+        animation: anim-main-app-img2 0.8s linear 1.6s forwards; }
+      .container-app .container-design .container-img-main #app_img_main3 {
+        height: 350px;
+        width: 175px;
+        position: relative;
+        visibility: hidden;
+        z-index: 3;
+        -webkit-animation: anim-main-app-img3 0.8s linear 2.4s forwards;
+        -moz-animation: anim-main-app-img3 0.8s linear 2.4s forwards;
+        -ms-animation: anim-main-app-img3 0.8s linear 2.4s forwards;
+        -o-animation: anim-main-app-img3 0.8s linear 2.4s forwards;
+        animation: anim-main-app-img3 0.8s linear 2.4s forwards; }
+      .container-app .container-design .container-img-main .app-img-main4-parent {
+        width: 0; }
+        .container-app .container-design .container-img-main .app-img-main4-parent #app_img_main4 {
+          height: 350px;
+          width: 175px;
+          position: relative;
+          visibility: hidden;
+          z-index: 2;
+          -webkit-animation: anim-main-app-img4 0.8s linear 3.2s forwards;
+          -moz-animation: anim-main-app-img4 0.8s linear 3.2s forwards;
+          -ms-animation: anim-main-app-img4 0.8s linear 3.2s forwards;
+          -o-animation: anim-main-app-img4 0.8s linear 3.2s forwards;
+          animation: anim-main-app-img4 0.8s linear 3.2s forwards; }
+    .container-app .container-design .container-phl {
+      flex: 1;
+      align-self: center;
+      min-width: 200px;
+      margin: 0 10px; }
+      .container-app .container-design .container-phl .text {
+        text-align: center;
+        font-size: 18px; }
+      .container-app .container-design .container-phl .logo-phl {
+        text-align: center;
+        font-family: mistral;
+        color: cadetblue;
+        font-size: 46px; }
 
 .container-features {
   padding: 30px 0;
@@ -100,7 +114,6 @@ main {
       font-weight: 500; }
 
 .container-customized {
-  min-height: 85vh;
   padding: 10px 0 20px;
   background-color: #fafafa; }
   .container-customized .text-part {
