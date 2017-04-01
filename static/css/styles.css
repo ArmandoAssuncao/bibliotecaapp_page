@@ -104,6 +104,8 @@ main {
   height: 85vh;
   padding: 10px 0 20px;
   background-color: #fafafa; }
+  .container-customized .text-part {
+    text-align: center; }
   .container-customized .container-detail {
     height: 300px; }
   .container-customized .logo img {
@@ -146,7 +148,13 @@ main {
   background-color: #222 !important; }
 
 ._title {
-  font-size: 24px; }
+  font-size: 30px; }
+
+._text-medium {
+  font-size: 22px; }
+
+._text-small {
+  font-size: 16px; }
 
 ._center-h {
   display: table;
