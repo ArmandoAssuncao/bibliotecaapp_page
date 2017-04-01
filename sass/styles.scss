@@ -104,7 +104,7 @@ main {
 }
 
 .container-customized {
-    height: 85vh;
+    min-height: 85vh;
     padding: 10px 0 20px;
     background-color: $background-color-customized;
 
@@ -113,19 +113,18 @@ main {
     }
 
     .container-detail {
-        height: 300px;
+        min-height: 320px;
     }
 
     .logo {
         img {
-            height: 100px;
-            width: 130px;
+            height: 130px;
         }
     }
 
     .box-color {
-        height: 50px;
-        width: 50px;
+        height: 55px;
+        width: 55px;
         margin: 3px;
         float: left;
 
@@ -141,18 +140,25 @@ main {
     }
 
     .app-customized {
-        img {
-            position: relative;
-            height: 300px;
-            width: 150px;
 
-            &.app-example-1 {
-                z-index: 2;
-            }
+        .container-imgs {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 300px - 75px;
 
-            &.app-example-2 {
-                z-index: 1;
-                transform: translate(-50%, -5px);
+            img {
+                position: relative;
+                height: 300px;
+                width: 150px;
+
+                &.app-example-1 {
+                    z-index: 2;
+                }
+
+                &.app-example-2 {
+                    z-index: 1;
+                    transform: translate(-50%, -5px);
+                }
             }
         }
     }
