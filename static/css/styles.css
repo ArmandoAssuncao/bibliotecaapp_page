@@ -397,10 +397,10 @@ main {
   .container-customized .app-customized .container-imgs {
     display: flex;
     flex-wrap: nowrap;
-    width: 135px; }
+    width: 188px; }
     .container-customized .app-customized .container-imgs img {
       position: relative;
-      height: 180px;
-      width: 90px; } }
+      height: 250px;
+      width: 125px; } }
 
 /*# sourceMappingURL=styles.css.map */
