@@ -19,6 +19,8 @@ main {
   padding: 40px 0 90px;
   background-color: #411fa5;
   color: white; }
+  .container-app .description-app {
+    text-align: justify; }
   .container-app .container-design {
     display: flex;
     flex-wrap: wrap; }
@@ -28,15 +30,10 @@ main {
       flex-wrap: nowrap;
       padding-top: 20px;
       justify-content: center; }
-      .container-app .container-design .container-img-main .img-main {
-        display: inline-block;
-        width: 0; }
       .container-app .container-design .container-img-main img {
         height: 350px;
         width: 175px; }
-      .container-app .container-design .container-img-main #app_img_main {
-        height: 350px;
-        width: 175px;
+      .container-app .container-design .container-img-main .app-img-main1-parent #app_img_main1 {
         position: relative;
         visibility: hidden;
         z-index: 5;
@@ -45,9 +42,7 @@ main {
         -ms-animation: anim-main-app-img 0.8s linear 0.8s forwards;
         -o-animation: anim-main-app-img 0.8s linear 0.8s forwards;
         animation: anim-main-app-img 0.8s linear 0.8s forwards; }
-      .container-app .container-design .container-img-main #app_img_main2 {
-        height: 350px;
-        width: 175px;
+      .container-app .container-design .container-img-main .app-img-main2-parent #app_img_main2 {
         position: relative;
         visibility: hidden;
         z-index: 4;
@@ -56,9 +51,7 @@ main {
         -ms-animation: anim-main-app-img2 0.8s linear 1.6s forwards;
         -o-animation: anim-main-app-img2 0.8s linear 1.6s forwards;
         animation: anim-main-app-img2 0.8s linear 1.6s forwards; }
-      .container-app .container-design .container-img-main #app_img_main3 {
-        height: 350px;
-        width: 175px;
+      .container-app .container-design .container-img-main .app-img-main3-parent #app_img_main3 {
         position: relative;
         visibility: hidden;
         z-index: 3;
@@ -70,8 +63,8 @@ main {
       .container-app .container-design .container-img-main .app-img-main4-parent {
         width: 0; }
         .container-app .container-design .container-img-main .app-img-main4-parent #app_img_main4 {
-          height: 350px;
-          width: 175px;
+          display: inline-block;
+          float: left;
           position: relative;
           visibility: hidden;
           z-index: 2;
@@ -116,6 +109,8 @@ main {
 .container-customized {
   padding: 10px 0 20px;
   background-color: #fafafa; }
+  .container-customized .description-customized {
+    text-align: justify; }
   .container-customized .text-part {
     text-align: center; }
   .container-customized .container-detail {
@@ -232,7 +227,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-35%, 0, 0); } }
+    transform: translate3d(-40%, 0, 0); } }
 @-moz-keyframes anim-main-app-img2 {
   from {
     opacity: 0;
@@ -240,7 +235,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-35%, 0, 0); } }
+    transform: translate3d(-40%, 0, 0); } }
 @-ms-keyframes anim-main-app-img2 {
   from {
     opacity: 0;
@@ -248,7 +243,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-35%, 0, 0); } }
+    transform: translate3d(-40%, 0, 0); } }
 @-o-keyframes anim-main-app-img2 {
   from {
     opacity: 0;
@@ -256,7 +251,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-35%, 0, 0); } }
+    transform: translate3d(-40%, 0, 0); } }
 @keyframes anim-main-app-img2 {
   from {
     opacity: 0;
@@ -264,7 +259,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-35%, 0, 0); } }
+    transform: translate3d(-40%, 0, 0); } }
 @-webkit-keyframes anim-main-app-img3 {
   from {
     opacity: 0;
@@ -272,7 +267,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-70%, 0, 0); } }
+    transform: translate3d(-80%, 0, 0); } }
 @-moz-keyframes anim-main-app-img3 {
   from {
     opacity: 0;
@@ -280,7 +275,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-70%, 0, 0); } }
+    transform: translate3d(-80%, 0, 0); } }
 @-ms-keyframes anim-main-app-img3 {
   from {
     opacity: 0;
@@ -288,7 +283,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-70%, 0, 0); } }
+    transform: translate3d(-80%, 0, 0); } }
 @-o-keyframes anim-main-app-img3 {
   from {
     opacity: 0;
@@ -296,7 +291,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-70%, 0, 0); } }
+    transform: translate3d(-80%, 0, 0); } }
 @keyframes anim-main-app-img3 {
   from {
     opacity: 0;
@@ -304,7 +299,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-70%, 0, 0); } }
+    transform: translate3d(-80%, 0, 0); } }
 @-webkit-keyframes anim-main-app-img4 {
   from {
     opacity: 0;
@@ -312,7 +307,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-105%, 0, 0); } }
+    transform: translate3d(-120%, 0, 0); } }
 @-moz-keyframes anim-main-app-img4 {
   from {
     opacity: 0;
@@ -320,7 +315,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-105%, 0, 0); } }
+    transform: translate3d(-120%, 0, 0); } }
 @-ms-keyframes anim-main-app-img4 {
   from {
     opacity: 0;
@@ -328,7 +323,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-105%, 0, 0); } }
+    transform: translate3d(-120%, 0, 0); } }
 @-o-keyframes anim-main-app-img4 {
   from {
     opacity: 0;
@@ -336,7 +331,7 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-105%, 0, 0); } }
+    transform: translate3d(-120%, 0, 0); } }
 @keyframes anim-main-app-img4 {
   from {
     opacity: 0;
@@ -344,6 +339,66 @@ main {
   to {
     opacity: 1;
     visibility: visible;
-    transform: translate3d(-105%, 0, 0); } }
+    transform: translate3d(-120%, 0, 0); } }
+@media screen and (max-width: 1080px) {
+  .container-app .container-design .container-img-main img {
+    height: 260px;
+    width: 130px; } }
+@media screen and (max-width: 768px) {
+  .container-app {
+    padding: 40px 0 40px; }
+    .container-app .container-design .container-img-main {
+      flex-basis: 100%; }
+      .container-app .container-design .container-img-main .app-img-main3-parent {
+        width: 0; }
+        .container-app .container-design .container-img-main .app-img-main3-parent #app_img_main3 {
+          display: inline-block;
+          float: left; }
+      .container-app .container-design .container-img-main .app-img-main4-parent {
+        display: none; }
+    .container-app .container-design .container-phl {
+      margin-top: 50px; }
+
+  .container-customized .container-detail {
+    min-height: 220px; }
+  .container-customized .app-customized .container-imgs {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 165px; }
+    .container-customized .app-customized .container-imgs img {
+      position: relative;
+      height: 220px;
+      width: 110px; }
+
+  ._title {
+    font-size: 30px; }
+
+  ._text-medium {
+    font-size: 18px; } }
+@media screen and (max-width: 450px) {
+  .container-app .container-design .container-img-main .app-img-main2-parent {
+    width: 80px; }
+    .container-app .container-design .container-img-main .app-img-main2-parent #app_img_main2 {
+      display: inline-block;
+      float: left; }
+  .container-app .container-design .container-img-main .app-img-main3-parent {
+    display: none; }
+
+  .container-features {
+    padding: 30px 0;
+    background-color: #f3f3f3; }
+    .container-features .features {
+      margin: 15px 0; }
+
+  .container-customized .container-detail {
+    min-height: 200px; }
+  .container-customized .app-customized .container-imgs {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 135px; }
+    .container-customized .app-customized .container-imgs img {
+      position: relative;
+      height: 180px;
+      width: 90px; } }
 
 /*# sourceMappingURL=styles.css.map */

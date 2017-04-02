@@ -1,6 +1,4 @@
 @mixin main_images($opacity, $zindex, $translateX){
-    height: 350px;
-    width: 175px;
     position: relative;
     //opacity: $opacity;
     visibility: hidden;
@@ -17,7 +15,7 @@
         to {
             opacity: 1;
             visibility: visible;
-            transform: translate3d($to * -35%, 0, 0);
+            transform: translate3d($to * -40%, 0, 0);
         }
     }
 }
