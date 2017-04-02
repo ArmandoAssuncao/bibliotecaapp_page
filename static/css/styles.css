@@ -123,23 +123,23 @@ main {
     margin: 3px;
     float: left; }
     .container-customized .box-color.color-1 {
-      background-color: aqua; }
+      background-color: #00ffff; }
     .container-customized .box-color.color-2 {
-      background-color: aqua; }
+      background-color: #ef9a9a; }
     .container-customized .box-color.color-3 {
-      background-color: aqua; }
+      background-color: #b39ddb; }
     .container-customized .box-color.color-4 {
-      background-color: aqua; }
+      background-color: #a5d6a7; }
     .container-customized .box-color.color-5 {
-      background-color: aqua; }
+      background-color: #9fa8da; }
     .container-customized .box-color.color-6 {
-      background-color: aqua; }
+      background-color: #ffcc80; }
     .container-customized .box-color.color-7 {
-      background-color: aqua; }
+      background-color: #bcaaa4; }
     .container-customized .box-color.color-8 {
-      background-color: aqua; }
+      background-color: #f48fb1; }
     .container-customized .box-color.color-9 {
-      background-color: aqua; }
+      background-color: #90caf9; }
   .container-customized .app-customized .container-imgs {
     display: flex;
     flex-wrap: nowrap;
