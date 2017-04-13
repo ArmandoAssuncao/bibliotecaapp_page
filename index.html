@@ -193,31 +193,46 @@
 
         <footer id="contact" class="page-footer container-contact">
             <div class="container">
-                <div class="row">
+                <div class="row _margin-row">
                     <div class="col s12 m12 l12">
                         <h5 class="white-text _center-h _title">Contato</h5>
+                    </div>
+                </div>
+                <div class="row" id="contact_container">
+                    <div class="col s12 m12 l12">
                         <p class="grey-text text-lighten-4">Envie-nos um e-mail</p>
                     </div>
-                    <div class="input-field col s12 m6 l6">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input id="first_name" type="text" autocomplete="off" class="validate">
-                        <label for="first_name">Nome</label>
-                    </div>
-                    <div class="input-field col s12 m6 l6">
-                        <i class="material-icons prefix">email</i>
-                        <input id="last_name" type="email" class="validate">
-                        <label for="email" data-error="Email Invalido">Email</label>
-                        <label for="last_name">Email</label>
-                    </div>
-                    <div class="input-field col s12 m12 l12">
-                        <i class="material-icons prefix">message</i>
-                        <input id="last_name" type="text" autocomplete="off" class="validate">
-                        <label for="last_name">Mensagem</label>
-                    </div>
-                    <div class="input-field col s12 m12 l12">
-                        <div class="_center-h">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Enviar</a>
+                    <form id="contact_form" action="#">
+                        <div class="input-field col s12 m6 l6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="form_name" type="text" autocomplete="off" class="validate" required>
+                            <label for="form_name" data-error="Nome Invalido">Nome</label>
                         </div>
+                        <div class="input-field col s12 m6 l6">
+                            <i class="material-icons prefix">email</i>
+                            <input id="form_email" type="email" class="validate" required>
+                            <label for="form_email" data-error="Email Invalido">Email</label>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <i class="material-icons prefix">message</i>
+                            <input id="form_message" type="text" autocomplete="off" class="validate" required>
+                            <label for="form_message" data-error="Mensagem Invalida">Mensagem</label>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <div class="_center-h">
+                                <button class="btn waves-effect waves-light" type="button" name="#" id="form_btn_submit" onclick=contactSubmit()>Enviar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row" id="submit_message">
+                    <div id="submit_success">
+                        <i class="material-icons medium prefix">done</i><span>Sua mensagem foi enviada ;-)</span>
+                    </div>
+                    <div id="submit_error">
+                        <i class="material-icons medium prefix">error</i><span>Ops, houve um error ao enviar a mensagem :-(</span>
                     </div>
                 </div>
             </div>
@@ -243,6 +258,68 @@
                     scrollTop: offsetTop
                 }, timeAnim);
             });
+        </script>
+        <script>
+            /// Form ///
+            function contactSubmit(){
+                if(contactValidate() === false) return false;
+
+                $('#form_btn_submit').prop("disabled",true);
+
+                var email = ['contato', '@', 'bibliotecaapp.com'];
+                $.ajax({
+                    url: '//formspree.io/' + email.join(''),
+                    method: "POST",
+                    dataType: 'json',
+                    data: {
+                        message: $('#form_message').val(),
+                        _replyto: $('#form_email').val(),
+                        name: $('#form_name').val()
+                    },
+                    success: function(data) {
+                        showMessage(true);
+                    },
+                    error: function(data) {
+                        showMessage(false);
+                    }
+                });
+            }
+
+            function contactValidate(){
+                var name = $('#form_name');
+                if(name.val().length < 2 || name.val().length > 40){
+                    name.addClass("invalid");
+                    return false;
+                }
+                var email = $('#form_email');
+                var pattern = new RegExp('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/');
+                if(email.val().length < 5 || email.val().length > 60 || pattern.test(email.val())){
+                    email.addClass("invalid");
+                    return false;
+                }
+                var message = $('#form_message');
+                if(message.val().length < 2 || message.val().length > 1000){
+                    message.addClass("invalid");
+                    return false;
+                }
+
+                return true;
+            }
+
+            function showMessage(success){
+                var height = $('#contact_container').css('height');
+                $('#submit_message').css('height', height);
+
+                $('#contact_container').fadeOut(500, function(){
+                    $('#submit_message').css('display', 'flex');
+                    if(success){
+                        $('#submit_success').css('display', 'flex');
+                    }
+                    else{
+                        $('#submit_error').css('display', 'flex');
+                    }
+                });
+            }
         </script>
     </body>
 </html>

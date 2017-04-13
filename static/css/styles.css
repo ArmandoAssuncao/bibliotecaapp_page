@@ -158,6 +158,18 @@ main {
 
 .container-contact {
   background-color: #222 !important; }
+  .container-contact #submit_message {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    color: #FFF; }
+    .container-contact #submit_message #submit_success, .container-contact #submit_message #submit_error {
+      display: none;
+      align-items: center; }
+      .container-contact #submit_message #submit_success span, .container-contact #submit_message #submit_error span {
+        margin-left: 10px; }
 
 ._title {
   font-size: 30px; }

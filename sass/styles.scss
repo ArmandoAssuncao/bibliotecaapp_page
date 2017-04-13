@@ -204,6 +204,24 @@ main {
 
 .container-contact {
     background-color: $background-color-contact !important;
+
+    #submit_message {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        text-align: center;
+        color: #FFF;
+
+        #submit_success, #submit_error {
+            display: none;
+            align-items: center;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 ._title {
